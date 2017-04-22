@@ -4,20 +4,27 @@
 <form action = '/visit' method = 'POST' role="form">
   <div class ="form-group" >
   <label> Ваше имя </label> 
-   <input name ="username" type="text" class="form-control" placeholder = "Ваше имя"><br><br>  
+   <input id="bbb" name ="username" type="text" class="form-control" placeholder = "Ваше имя"><br><br>  
   <label>Ваше телефон</label>
   <input name ="phone" type="text" class="form-control" placeholder = "Ваше телефон"><br><br>
    <label>Когда вас ждать</label>
-  <input name ="date_time" type="text" class="form-control" placeholder = "Когда вас ждать"> 
+  <input id="aaa" name ="date_time" type="text" class="form-control" placeholder = "Когда вас ждать"> 
   </div><br>
-  
+  <div>
+<label>Ваш парикмахер</label>  
 <select name = "barber" class="form-control">
+
   <option>Walter White</option>
   <option>Jessie Pinkman</option>
   <option>Anton Smirnov</option>
   
-</select><br><br>
+</select>
+</div><br><br>
 <button type ='submit' class = 'btn btn-primary'>Отправить </button>
-  
-  
-</form>		
+</form>
+
+<script type="text/javascript">
+  $('#aaa').css('background-color','green');
+   $('#bbb').css('background-color','red');
+
+</script>		
