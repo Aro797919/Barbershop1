@@ -13,12 +13,12 @@ post'/visit' do
 	@username = params[:username]
 	@phone = params[:phone]
 	@date_time = params[:date_time]
-	@master = params[:master]
-	@message =" Dear #{@username} ,Phone #{@phone}, we signed up #{@date_time} to the master: #{@master}" 
+	@barber = params[:barber]
+	@message =" Dear #{@username} ,Phone #{@phone}, we signed up #{@date_time} to the master: #{@barber}" 
 	
 	
 	f = File.open"./public/users.txt","a"
-	f.write"User: #{@username} Phone: #{@phone} Date and Time: #{@date_time} to the master: #{@master}\n"
+	f.write"User: #{@username} Phone: #{@phone} Date and Time: #{@date_time} to the master: #{@barber}\n"
 	f.close
 	erb :message	
 	end
